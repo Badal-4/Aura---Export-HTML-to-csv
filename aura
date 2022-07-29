@@ -1,0 +1,41 @@
+<aura:component implements="forceCommunity:themeLayout,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+access="global" extends="c:CustomerCommunity_LoggedInUser_HeaderCmp">
+<aura:attribute name="recordList" type="List" access="global" default="['United States','United Kingdom','France','Germany','Sweden']"/>
+<aura:attribute name="sharesList" type="List" default="['15','35','8','2','10','25',95']"/>
+<div style="float:right">
+    <lightning:button iconName="utility:download" iconPosition="left" label="Export as CSV" onclick="{!c.handleClick}" class="slds-button slds-button_brand"/>        
+</div>
+<table border="1" cellspacing="10" cellpadding="35">
+    <tr>
+        <th>Country</th>
+        <th>Shares(mn)</th>
+        <th>% shares out</th>
+    </tr>
+    <tr>
+        <td>United States</td>
+        <td>19</td>
+        <td>9.5%</td>
+    </tr>
+    <tr>
+        <td>United Kingdom</td>
+        <td>22</td>
+        <td>8.6%</td>
+    </tr>
+    <tr>
+        <td>France</td>
+        <td>25</td>
+        <td>3.4%</td>
+    </tr>
+    <tr>
+        <td>Germany</td>
+        <td>9</td>
+        <td>5.4%</td>
+    </tr>
+    <tr>
+        <td>Sweden</td>
+        <td>9</td>
+        <td>6.3%</td>
+    </tr>
+</table>
+
+</aura:component>	
